@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Larrysmart</title>
+<meta name="description" content="Get in touch with Larrysmart.">
+<script>
+document.documentElement.classList.add("js");
+try {
+  var t = localStorage.getItem("theme");
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">Larry<span>smart</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="site-nav" id="nav" aria-label="Main">
+    <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="resume.html">Resume</a><a href="contact.html" class="active" aria-current="page">Contact</a>
+    <button class="theme-toggle" aria-label="Switch between light and dark theme"></button>
+  </nav>
+</header>
+<main class="page-main">
+<section class="page-intro"><h1>Contact me</h1><p class="lede">Have a question, project idea or collaboration in mind? Send me a message.</p></section>
+<div class="contact-grid">
+  <section class="reveal">
+    <h2>Find me online</h2>
+    <dl class="contact-list">
+      <dt>Email</dt><dd><a href="mailto:your.email@example.com">your.email@example.com</a></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/yourusername">github.com/yourusername</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a></dd>
+    </dl>
+  </section>
+  <section class="reveal">
+    <h2>Send a message</h2>
+    <form id="contact-form" class="form" novalidate>
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" placeholder="Enter your name" required>
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" placeholder="What is this about?">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+      <p class="form-error" role="alert" hidden>Please fill in your name, a valid email and a message.</p>
+      <button class="btn" type="submit">Open in email app</button>
+      <p class="note">This opens your email app with the message filled in. No data is sent to a server.</p>
+    </form>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <p>&copy; <span data-year></span> Larrysmart. Built with HTML, CSS and JavaScript.</p>
+</footer>
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>

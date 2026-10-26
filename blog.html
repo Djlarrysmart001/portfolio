@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Larrysmart</title>
+<meta name="description" content="Articles and write-ups by Larrysmart.">
+<script>
+document.documentElement.classList.add("js");
+try {
+  var t = localStorage.getItem("theme");
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">Larry<span>smart</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="site-nav" id="nav" aria-label="Main">
+    <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="blog.html" class="active" aria-current="page">Blog</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Switch between light and dark theme"></button>
+  </nav>
+</header>
+<main class="page-main">
+<section class="page-intro"><h1>Blog and write-ups</h1><p class="lede">Short articles about software development, AI, UI/UX and what I learn while building.</p></section><div class="stack" data-stagger><article class="card article-card reveal">
+  <p class="tag">Development, 5 min read</p>
+  <h2><a href="blog/getting-started-with-web-development.html">Getting Started with Web Development</a></h2>
+  <p>A beginner-friendly look at how HTML, CSS and JavaScript work together to create websites.</p>
+  <a class="text-link" href="blog/getting-started-with-web-development.html">Read article</a>
+</article><article class="card article-card reveal">
+  <p class="tag">Project notes, 4 min read</p>
+  <h2><a href="blog/lessons-from-building-my-first-full-stack-project.html">Lessons from Building My First Full-Stack Project</a></h2>
+  <p>Notes on planning features, designing a database, connecting an API and testing one step at a time.</p>
+  <a class="text-link" href="blog/lessons-from-building-my-first-full-stack-project.html">Read article</a>
+</article></div>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span data-year></span> Larrysmart. Built with HTML, CSS and JavaScript.</p>
+</footer>
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>

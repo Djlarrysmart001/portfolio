@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Larrysmart</title>
+<meta name="description" content="Education, skills and experience of Larrysmart.">
+<script>
+document.documentElement.classList.add("js");
+try {
+  var t = localStorage.getItem("theme");
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">Larry<span>smart</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="site-nav" id="nav" aria-label="Main">
+    <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="resume.html" class="active" aria-current="page">Resume</a><a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Switch between light and dark theme"></button>
+  </nav>
+</header>
+<main class="page-main">
+
+<section class="page-intro">
+  <h1>Larrysmart</h1>
+  <p class="lede">Aspiring software developer. Front end, Python, AI and UI/UX.</p>
+  <p><a class="btn" href="assets/resume.pdf" download>Download CV (PDF)</a></p>
+</section>
+
+<section class="block reveal"><h2>Profile</h2>
+<p>Software development student who likes building practical, secure and easy-to-use products. I learn best by building real projects and working with others to solve real problems.</p></section>
+
+<section class="block reveal"><h2>Education</h2>
+<div class="timeline">
+  <div class="tl-item"><h3>Higher National Diploma, Computer Science</h3><p class="meta">Federal Polytechnic Ilaro, in progress</p></div>
+  <div class="tl-item"><h3>Ordinary National Diploma</h3><p class="meta">Federal Polytechnic Ilaro, 2024</p></div>
+</div></section>
+
+<section class="block reveal"><h2>Technical skills</h2>
+<p class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Flask</span><span>MySQL</span><span>Git and GitHub</span><span>UI/UX fundamentals</span></p></section>
+
+<section class="block reveal"><h2>Selected project</h2>
+<h3>Integrated Health Management Information System</h3>
+<p>Designed and developed a health information system to support patient registration, medical records, consultations, laboratory requests and pharmacy workflows.</p></section>
+
+</main>
+<footer class="site-footer">
+  <p>&copy; <span data-year></span> Larrysmart. Built with HTML, CSS and JavaScript.</p>
+</footer>
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>

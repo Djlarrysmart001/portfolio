@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Larrysmart</title>
+<meta name="description" content="Larrysmart is a Computer Science student building web software.">
+<script>
+document.documentElement.classList.add("js");
+try {
+  var t = localStorage.getItem("theme");
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">Larry<span>smart</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="site-nav" id="nav" aria-label="Main">
+    <a href="index.html" class="active" aria-current="page">Home</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Switch between light and dark theme"></button>
+  </nav>
+</header>
+<main class="page-main">
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-kicker">Computer Science student, Nigeria</p>
+    <h1><span class="line">I build software</span><span class="line">that people can</span><span class="line">actually use.</span></h1>
+    <p class="lede hero-lede">I'm Larrysmart. I design databases, write APIs and build the web pages on top of them, with a focus on practical systems such as health information platforms.</p>
+    <div class="hero-actions">
+      <a class="btn" href="projects.html">See my projects</a>
+      <a class="btn btn-outline" href="contact.html">Contact me</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="assets/images/larrysmart.jpg" alt="Portrait of Larrysmart" width="800" height="1000" fetchpriority="high">
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="reveal">What I work with</h2>
+  <div class="grid three" data-stagger>
+    <article class="card reveal"><h3>Back end</h3><p>Python, Flask, SQLAlchemy and MySQL. REST APIs, authentication and role-based access.</p></article>
+    <article class="card reveal"><h3>Front end</h3><p>Semantic HTML, responsive CSS and plain JavaScript that works on a phone first.</p></article>
+    <article class="card reveal"><h3>System design</h3><p>Turning a real workflow, like a clinic visit, into tables, screens and clear user roles.</p></article>
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="reveal">Featured project</h2>
+  <article class="card feature reveal">
+    <h3>Integrated Health Management Information System</h3>
+    <p>A web platform that coordinates clinic workflows and organizes patient information with role-based access for tertiary institutions.</p>
+    <p class="chips"><span>Python</span><span>Flask</span><span>MySQL</span><span>JavaScript</span></p>
+    <a class="text-link" href="projects.html">Read the details</a>
+  </article>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>&copy; <span data-year></span> Larrysmart. Built with HTML, CSS and JavaScript.</p>
+</footer>
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>

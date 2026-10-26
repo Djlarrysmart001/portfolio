@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Larrysmart</title>
+<meta name="description" content="Projects built by Larrysmart.">
+<script>
+document.documentElement.classList.add("js");
+try {
+  var t = localStorage.getItem("theme");
+  if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">Larry<span>smart</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="site-nav" id="nav" aria-label="Main">
+    <a href="index.html">Home</a><a href="projects.html" class="active" aria-current="page">Projects</a><a href="blog.html">Blog</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Switch between light and dark theme"></button>
+  </nav>
+</header>
+<main class="page-main">
+<section class="page-intro"><h1>Projects</h1><p class="lede">Things I have designed and built. Each one lists what I used and what I did.</p></section><div class="stack" data-stagger><article class="card project reveal">
+  <p class="tag">Health technology</p>
+  <h2>Integrated Health Management Information System</h2>
+  <p>A web-based health information platform that coordinates clinic workflows and organizes patient information with role-based access.</p>
+  <p><strong>Technology:</strong> Python, Flask, MySQL, SQLAlchemy, HTML, CSS, JavaScript</p>
+  <p><strong>My contribution:</strong> System analysis, database design, API development and interface implementation.</p>
+  <p class="links"><a class="text-link" href="#">Live demo</a><a class="text-link" href="#">Source code</a></p>
+</article><article class="card project reveal">
+  <p class="tag">Web development</p>
+  <h2>Personal Portfolio Website</h2>
+  <p>A responsive website that presents my projects, skills, articles and contact details.</p>
+  <p><strong>Technology:</strong> HTML, CSS, JavaScript</p>
+  <p><strong>My contribution:</strong> Design, responsive layout, animations and interactive navigation.</p>
+  <p class="links"><a class="text-link" href="#">Live demo</a><a class="text-link" href="#">Source code</a></p>
+</article><article class="card project reveal">
+  <p class="tag">AI and technology</p>
+  <h2>AI Learning Experiments</h2>
+  <p>Small experiments where I test ideas in machine learning and AI tools and write down what I learn.</p>
+  <p><strong>Technology:</strong> Python</p>
+  <p><strong>My contribution:</strong> Planning each experiment, running it and documenting the results.</p>
+  <p class="links"><a class="text-link" href="#">Live demo</a><a class="text-link" href="#">Source code</a></p>
+</article></div>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span data-year></span> Larrysmart. Built with HTML, CSS and JavaScript.</p>
+</footer>
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>
